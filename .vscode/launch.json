@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Debug",
+          "type": "cppdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe", // Adjust if necessary
+          "args": [],
+          "stopAtEntry": false,
+          "cwd": "${workspaceFolder}",
+          "environment": [],
+          "externalConsole": false, // Set to true for better visibility
+          "MIMode": "gdb",
+          "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe", // Adjust if necessary
+          "targetArchitecture": "x64",
+          "setupCommands": [
+              {
+                  "text": "set print pretty on",
+                  "description": "Enable pretty printing",
+                  "ignoreFailures": true
+              }
+          ],
+          "preLaunchTask": "build"
+      }
+  ]
+}

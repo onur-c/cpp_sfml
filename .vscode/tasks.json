@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "cppbuild",
+        "label": "build",
+        "command": "g++",
+        "args": [
+            "-g", // Enable debugging symbols
+            "${file}",
+            "-I", "C:\\libraries\\SFML-2.6.1\\include", // SFML include directory
+            "-L", "C:\\libraries\\SFML-2.6.1\\lib",     // SFML library directory
+            "-lsfml-graphics",       // Link SFML graphics module
+            "-lsfml-window",         // Link SFML window module
+            "-lsfml-system",         // Link SFML system module
+            "-o",
+            "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": ["$gcc"],
+        "detail": "Generated task for C++ build."
+      }
+    ]
+  }
+  
